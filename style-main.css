@@ -1,0 +1,46 @@
+#map {
+    height: 95%;
+    width: 95%;
+  }
+  /* Optional: Makes the sample page fill the window. */
+ html, body {
+    height: 100%;
+    margin: 0;
+    padding: 2px;
+    padding-bottom: 0;
+ box-sizing: border-box;
+    /* display: flex; */
+  }
+  .header{
+    background-color: black;
+    width: 90%;
+    height: 8%;
+    margin: 1% auto;
+  }
+.main{
+  border-radius: 3%;
+  margin: 1% auto;
+height: 40%;
+width: 90%;
+/* margin: auto; */
+background-color: brown;
+border: none;
+}
+.search{
+height: 10%;
+width: 90%;
+background-color: blue;
+border: none;
+margin: 1% auto;
+/* margin: auto; */
+}
+.container-images{
+height: 36%;
+width: 90%;
+background-color: black;
+border-radius: 3%;
+margin: 1% auto;
+border: none;
+/* margin-bottom: 0%; */
+/* margin: auto; */
+}
