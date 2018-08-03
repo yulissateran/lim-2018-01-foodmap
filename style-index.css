@@ -1,0 +1,39 @@
+body {margin: 0%;
+    padding:0;
+    }
+  
+  .splash{
+  position: fixed;
+  top: 0;
+  background-color:  #00FA9A; 
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  }
+  .logo {
+      top: 45%;
+      color: #fa4659;   
+      font-family: 'Lobster', cursive;
+      -webkit-animation-name: grow; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+      animation-name: grow;
+      animation-duration: 2s;
+      border-radius: 100%;
+      position: relative;
+      -webkit-animation-delay: 0s; /* Safari 4.0 - 8.0 */
+      /* -webkit-animation-fill-mode: both; Safari 4.0 - 8.0    */
+      animation-delay: 0s;
+      animation-fill-mode: both;
+  }
+  @-webkit-keyframes grow {
+     
+      from{ font-size: 2em;}
+      to{ font-size: 5em;}
+  }
+
+  @keyframes grow {
+ 
+      from{font-size: 2em;}
+      to{font-size: 5em;}
+  }
+
