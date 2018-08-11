@@ -29,11 +29,11 @@ const showRating = (element) => {
 
 
 
-const filterRestaurants = (response, string)=> response.filter((restaurant)=>restaurant.types.includes(string));
+const filterRestaurants = (response, string) => response.filter((restaurant) => restaurant.types.includes(string));
 
 
-const renderModal =(title, texto, container,img)=>{
-  container.innerHTML =`
+const renderModal = (title, texto, container, img) => {
+  container.innerHTML = `
   <div id="modal" class="modal">
 <div class="modal-content">
 <div class="modal-header">
@@ -45,28 +45,28 @@ const renderModal =(title, texto, container,img)=>{
  <figure class"restaurant-img"><img class="img-rest" id="img-modal" class=/></figure>
  </div>
 </div>
-</div>`,document.getElementById('close-modal').addEventListener('click', ()=>container.innerHTML = '')
-,document.getElementById('modal').addEventListener('click', ()=>container.innerHTML = '');
-if(img){
-  const imgContainer=document.getElementById('img-modal');
-  imgContainer.setAttribute('src', img);
-}
+</div>`, document.getElementById('close-modal').addEventListener('click', () => container.innerHTML = '')
+    , document.getElementById('modal').addEventListener('click', () => container.innerHTML = '');
+  if (img) {
+    const imgContainer = document.getElementById('img-modal');
+    imgContainer.setAttribute('src', img);
+  }
 };
 
-const moreInformationRestaurant =()=>{
+const moreInformationRestaurant = () => {
   const idRestaurant = event.target.getAttribute('id-restaurant');
   console.log(event.target);
-  getData(dataRestaurants).then((response)=>{
+  getData(dataRestaurants).then((response) => {
     console.log(response, idRestaurant);
-    return response.filter((restaurant)=>restaurant.id === idRestaurant);
-   }).then((response)=>{
-     console.log(response);
-     renderModal(response[0].name, response[0].vicinity, containerModal, response[0].photos);
-   })
+    return response.filter((restaurant) => restaurant.id === idRestaurant);
+  }).then((response) => {
+    console.log(response);
+    renderModal(response[0].name, 	'Delivery:  &phone; 12345689', containerModal, response[0].photos);
+  })
 };
 
 
-showRestaurants = (response, containerRestaurants, showRating, dataRestaurants)=>{
+showRestaurants = (response, containerRestaurants, showRating, dataRestaurants) => {
   containerRestaurants.innerHTML = '';
   response.forEach(element => {
     let countStarts = showRating(element);
@@ -81,22 +81,22 @@ showRestaurants = (response, containerRestaurants, showRating, dataRestaurants)=
     <li id="restaurant-rating">${countStarts}</li>
     <li>${element.vicinity}</li>
     </ul>
-    <span class="more-info-restaurant" id-restaurant=${element.id}>&hellip;</span>
+    <span class="more-info-restaurant" id-restaurant=${element.id}>&phone;</span>
     </div>
     </div>`;
-  }),addEvent(containerRestaurants);
-  
+  }), addEvent(containerRestaurants);
+
   return containerRestaurants
 };
 
-const addEvent=(containerRestaurants)=>{
+const addEvent = (containerRestaurants) => {
   const elementMoreInfo = document.getElementsByClassName('more-info-restaurant');
   if (elementMoreInfo !== '') {
-    
+
     console.log(elementMoreInfo);
-   for(let i of elementMoreInfo){  
-     console.log(i);
-    i.addEventListener('click', moreInformationRestaurant, false);
+    for (let i of elementMoreInfo) {
+      console.log(i);
+      i.addEventListener('click', moreInformationRestaurant, false);
     };
   };
 };

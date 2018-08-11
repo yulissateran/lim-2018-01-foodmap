@@ -44,7 +44,7 @@
 
 .modal-header {
   padding: 3%;
-  background-color: #44d9e6;
+  background-color: #00d2d3;
   color: white;
 }
 
@@ -84,21 +84,20 @@ font-size: 22px;
       
 }
   @media screen and (min-width:600px) {
-      .modal-content {
-          width: 70%;
-      }
+.modal-content {
+width: 70%;
+}
 
-      .modal {
-          padding-top: 20%;
-      }
-  }
-  @media screen and (min-width:800px) {
+.modal {
+  padding-top: 20%;
+}
+}
+@media screen and (min-width:800px) {
       .modal-content {
           width: 50%;
       }
 
-      .modal {
-          padding-top: 10%;
-      }
-
-      }
+.modal {
+  padding-top: 10%;
+ }
+}
