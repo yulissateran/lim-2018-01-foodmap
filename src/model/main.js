@@ -1,8 +1,8 @@
-const dataRestaurants = 'restaurants.json';
+const dataRestaurants = '../data/restaurants.json';
 let ratingRestaurant = '';
 const starts = [0, 1, 2, 3, 4];
 
-
+// función llamado a los datos
 const getData = (url) => {
   return fetch(url)
     .then(response => {
@@ -13,6 +13,8 @@ const getData = (url) => {
     .catch(error => error);
 };
 
+
+// crea estrellas para indicar el rating de un restaurante
 const showRating = (element) => {
   ratingRestaurant = '';
   if (element.rating) {
@@ -26,12 +28,10 @@ const showRating = (element) => {
   }
   return ratingRestaurant;
 };
-
-
-
+//filtra restaurantes que sean del tipo del string dado.
 const filterRestaurants = (response, string) => response.filter((restaurant) => restaurant.types.includes(string));
 
-
+//función modal: modal de bienvenida e información de restaurantes se mostrarán el él.
 const renderModal = (title, texto, container, img) => {
   container.innerHTML = `
   <div id="modal" class="modal">
@@ -53,19 +53,18 @@ const renderModal = (title, texto, container, img) => {
   }
 };
 
+
+//trae información del restaurante seleccionado para mostrarlo en el modal
 const moreInformationRestaurant = () => {
   const idRestaurant = event.target.getAttribute('id-restaurant');
-  console.log(event.target);
   getData(dataRestaurants).then((response) => {
-    console.log(response, idRestaurant);
     return response.filter((restaurant) => restaurant.id === idRestaurant);
   }).then((response) => {
-    console.log(response);
     renderModal(response[0].name, 	'Delivery:  &phone; 12345689', containerModal, response[0].photos);
   })
 };
 
-
+// crea divs con la información de cada restaurante
 showRestaurants = (response, containerRestaurants, showRating, dataRestaurants) => {
   containerRestaurants.innerHTML = '';
   response.forEach(element => {
@@ -85,17 +84,14 @@ showRestaurants = (response, containerRestaurants, showRating, dataRestaurants) 
     </div>
     </div>`;
   }), addEvent(containerRestaurants);
-
   return containerRestaurants
 };
 
+// agrega evento para mostrar modal a cada botón de los divs
 const addEvent = (containerRestaurants) => {
   const elementMoreInfo = document.getElementsByClassName('more-info-restaurant');
   if (elementMoreInfo !== '') {
-
-    console.log(elementMoreInfo);
     for (let i of elementMoreInfo) {
-      console.log(i);
       i.addEventListener('click', moreInformationRestaurant, false);
     };
   };

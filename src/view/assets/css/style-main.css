@@ -78,7 +78,7 @@
   float : left;
 }
 .name-restaurant{
-  font-family: 'Calabacín', cursivo;
+  font-family: 'Fira Sans', sans-serif;
 }
 .list-restaurants-types{
   margin: 0;
@@ -120,7 +120,7 @@
   font-family: 'Nunito', sans-serif;
 }
 .more-info-restaurant{
-  padding: 25px;
+  padding: 15px;
   height: 5px;
   width: 10px;
   border: 2px solid black;

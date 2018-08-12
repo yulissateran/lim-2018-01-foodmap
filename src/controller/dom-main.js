@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   getData(dataRestaurants).then((response) => {
     showRestaurants(response, containerRestaurants, showRating);
   }).then(() => {
-    console.log('render');
     renderModal('Bienvenidx a Foodmap!', msgWelcome, containerModal);
   });
 });
