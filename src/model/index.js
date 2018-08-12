@@ -1,6 +1,6 @@
 
 const main = () => {
-  window.location = 'main.html';
+  window.location = 'view/main.html';
 };
 document.addEventListener('DOMContentLoaded', () => {
   window.setTimeout(main, 2000);;;

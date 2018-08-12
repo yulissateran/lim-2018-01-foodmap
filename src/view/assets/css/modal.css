@@ -50,11 +50,13 @@
 
 .modal-body {
   padding: 3% 6%;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 h2{
 color: white;
 font-size: 22px;
+font-family: 'Fira Sans', sans-serif;
 }
 
 /* Add Animation */

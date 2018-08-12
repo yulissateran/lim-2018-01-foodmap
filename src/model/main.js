@@ -1,4 +1,4 @@
-const dataRestaurants = 'restaurants.json';
+const dataRestaurants = '../data/restaurants.json';
 let ratingRestaurant = '';
 const starts = [0, 1, 2, 3, 4];
 
