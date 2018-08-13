@@ -171,14 +171,9 @@
     height: 100%;
   }
 }
-/* @media screen and (max-width: 420px) {
-  .list-info-restaurant{
-    width: 80%;
-  }
-} */
+
 @media screen and (max-width: 420px) {
   .list-info-restaurant{
-    margin-top: 5%;
     width: 80%;
     margin-bottom: 0;
   }
@@ -204,4 +199,9 @@
 .icon{
   float: right;
 }
+}
+@media screen and (max-width: 260px) {
+  .list-info-restaurant{
+font-size: 13px;
+  }
 }
