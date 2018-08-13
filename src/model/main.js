@@ -80,7 +80,7 @@ showRestaurants = (response, containerRestaurants, showRating, dataRestaurants) 
     <li id="restaurant-rating">${countStarts}</li>
     <li>${element.vicinity}</li>
     </ul>
-    <span class="more-info-restaurant" id-restaurant=${element.id}>&phone;</span>
+    <span class="more-info-restaurant" id-restaurant=${element.id}><img class="icon" src="../view//assets/img/phone-symbol-of-an-auricular-inside-a-circle.png"/></span>
     </div>
     </div>`;
   }), addEvent(containerRestaurants);
