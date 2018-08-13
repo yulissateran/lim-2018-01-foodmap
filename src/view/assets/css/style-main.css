@@ -129,6 +129,7 @@
   float: right;
   box-sizing: border-box;
 }
+
   @media screen and (min-width:847px) {
 .search{
   position: relative; 
@@ -169,4 +170,38 @@
     padding-bottom: 0%;
     height: 100%;
   }
+}
+/* @media screen and (max-width: 420px) {
+  .list-info-restaurant{
+    width: 80%;
+  }
+} */
+@media screen and (max-width: 420px) {
+  .list-info-restaurant{
+    margin-top: 5%;
+    width: 80%;
+    margin-bottom: 0;
+  }
+  .more-info-restaurant{
+    padding: 5px;
+    height: 35px;
+    width: 25px;
+  }
+  .restaurant-info{
+    width: 80% ;
+    margin: 0%;
+  }
+  .restaurant-img{
+    height: 65%; 
+    width: 20%;
+    float: left;
+    margin-bottom: 8%;
+    margin-top: 5%;
+  }
+  .restaurant {
+    padding-right: 0;
+}
+.icon{
+  float: right;
+}
 }
